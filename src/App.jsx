@@ -8,6 +8,10 @@ function App() {
   const [search, setSearch] = useState('')
   const [sortBy, setSortBy] = useState('rating-high')
 
+  function handleDelete(id) {
+    setAnimals(animals.filter((animal) => animal.id !== id))
+  }
+
   const visibleAnimals = animals.filter((animal) =>
     animal.name.toLowerCase().includes(search.toLowerCase())
   )
@@ -38,7 +42,7 @@ function App() {
       </select>
       <div className="animal-list">
         {sortedAnimals.map((animal) => (
-          <AnimalCard key={animal.id} animal={animal} />
+          <AnimalCard key={animal.id} animal={animal} onDelete={handleDelete}/>
         ))}
       </div>
     </div>
