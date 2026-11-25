@@ -12,6 +12,14 @@ function App() {
     setAnimals(animals.filter((animal) => animal.id !== id))
   }
 
+  function handleRatingChange(id, newRating) {
+  setAnimals(
+    animals.map((animal) =>
+      animal.id === id ? { ...animal, rating: newRating } : animal
+    )
+  )
+}
+
   const visibleAnimals = animals.filter((animal) =>
     animal.name.toLowerCase().includes(search.toLowerCase())
   )
@@ -42,7 +50,12 @@ function App() {
       </select>
       <div className="animal-list">
         {sortedAnimals.map((animal) => (
-          <AnimalCard key={animal.id} animal={animal} onDelete={handleDelete}/>
+          <AnimalCard
+          key={animal.id}
+          animal={animal}
+          onDelete={handleDelete}
+          onRatingChange={handleRatingChange}
+        />
         ))}
       </div>
     </div>
