@@ -42,6 +42,7 @@ function App() {
   return (
     <div className="app">
       <h1>Weird Animals</h1>
+      <div className="controls">
       <input
         type="text"
         placeholder="Search animals..."
@@ -53,7 +54,8 @@ function App() {
         <option value="rating-low">Rating (lowest first)</option>
         <option value="name">Name (A–Z)</option>
       </select>
-      <AddAnimalForm onAdd={handleAdd} />
+      </div>
+      
       <div className="animal-list">
         {sortedAnimals.map((animal) => (
           <AnimalCard
@@ -64,6 +66,7 @@ function App() {
         />
         ))}
       </div>
+      <AddAnimalForm onAdd={handleAdd} />
     </div>
   )
 }

@@ -1,7 +1,99 @@
 .animal-card img {
   display: block;
-  width: 30%;
+  width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: 14px;
+}
+
+.app {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.app h1 {
+  font-family: var(--font-title);
+  font-size: 3em;
+  color: var(--accent-dark);
+  text-align: center;
+  margin: 0 0 24px;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.controls input {
+  flex: 1;
+  min-width: 200px;
+}
+
+.animal-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.animal-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: var(--card);
+  border: 3px solid var(--border-color);
+  border-radius: 20px;
+  padding: 16px;
+}
+
+.animal-card h2 {
+  font-family: var(--font-title);
+  margin: 0;
+}
+
+.animal-card p {
+  margin: 0;
+  color: var(--muted);
+  flex: 1;
+}
+
+.star-rating {
+  display: flex;
+  gap: 2px;
+}
+
+.star {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 26px;
+  color: var(--star);
+}
+
+.star:hover {
+  background: none;
+  transform: scale(1.2);
+}
+
+.add-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 12px auto 12px;
+  background: var(--card);
+  border: 3px solid var(--accent);
+  border-radius: 20px;
+  padding: 24px;
+}
+
+.add-form h2 {
+  font-family: var(--font-title);
+  color: var(--accent-dark);
+  margin: 0;
+}
+
+.add-form textarea {
+  min-height: 80px;
+  resize: vertical;
 }
