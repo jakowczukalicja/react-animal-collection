@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "name": "Axolotl",
+    "description": "A pink smiling salamander from Mexico with fluffy gills that look like a little crown.",
+    "image": "",
+    "rating": 5
+  },
+  {
+    "id": 2,
+    "name": "Red Panda",
+    "description": "A fluffy orange tree climber with a striped tail. Not a panda at all, but just as cute.",
+    "image": "",
+    "rating": 5
+  },
+  {
+    "id": 3,
+    "name": "Quokka",
+    "description": "A small Australian animal that always looks like it is smiling for a photo.",
+    "image": "",
+    "rating": 4
+  },
+  {
+    "id": 4,
+    "name": "Sea Bunny",
+    "description": "A tiny sea slug that looks exactly like a fluffy white bunny with little ears.",
+    "image": "",
+    "rating": 4
+  },
+  {
+    "id": 5,
+    "name": "Fennec Fox",
+    "description": "A tiny desert fox with giant ears that help it hear bugs moving under the sand.",
+    "image": "",
+    "rating": 3
+  },
+  {
+    "id": 6,
+    "name": "Mandarin Fish",
+    "description": "One of the most colorful fish in the world, covered in bright blue and orange swirls.",
+    "image": "",
+    "rating": 2
+  },
+  {
+    "id": 7,
+    "name": "Pink Fairy Armadillo",
+    "description": "The smallest armadillo in the world, with a soft pink shell and fluffy white fur.",
+    "image": "",
+    "rating": 1
+  }
+]
