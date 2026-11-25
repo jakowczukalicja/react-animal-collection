@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import animalsData from './data/animals.json'
 import AnimalCard from './components/AnimalCard'
+import AddAnimalForm from './components/AddAnimalForm'
 
 function App() {
   const [animals, setAnimals] = useState(animalsData)
@@ -10,6 +11,10 @@ function App() {
 
   function handleDelete(id) {
     setAnimals(animals.filter((animal) => animal.id !== id))
+  }
+
+  function handleAdd(newAnimal) {
+    setAnimals([...animals, { ...newAnimal, id: Date.now() }])
   }
 
   function handleRatingChange(id, newRating) {
@@ -48,6 +53,7 @@ function App() {
         <option value="rating-low">Rating (lowest first)</option>
         <option value="name">Name (A–Z)</option>
       </select>
+      <AddAnimalForm onAdd={handleAdd} />
       <div className="animal-list">
         {sortedAnimals.map((animal) => (
           <AnimalCard

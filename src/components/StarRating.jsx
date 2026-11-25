@@ -6,6 +6,7 @@ function StarRating({ rating, onChange }) {
       {stars.map((star) => (
         <button
           key={star}
+          type="button"
           className="star"
           onClick={() => onChange(star)}
           aria-label={`Rate ${star} out of 5`}
